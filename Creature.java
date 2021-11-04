@@ -49,8 +49,7 @@ public abstract class Creature
      * @return a value between 1 and str to be used to cause damage to another creature
      */
     public int attack(){
-        int dmg = 0;
-        
+        int dmg;
         dmg = Randomizer.nextInt(str);
         
         return dmg;
@@ -101,7 +100,7 @@ public abstract class Creature
      * Gets the number of hit point of this creature
      * @return the number of hit points left
      */
-    public int getHEalth()
+    public int getHealth()
     {
         return hp;
     }
