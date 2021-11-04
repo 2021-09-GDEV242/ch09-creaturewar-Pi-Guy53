@@ -5,16 +5,16 @@
  * Implements a maximum/minimum strength for the creature type [20/5]
  * Implements a maximum/minimum hitpoint total for the creature type [25/5]
  * 
- * @author Bill Crosbie
- * @version 2020-10 v1.0
+ * @author Mihail Vaporakis
+ * @version 2021-11-4
  */
 public class Human extends Creature
 {
     // instance variables - replace the example below with your own
-    private static final int MAX_HUMAN_HP = 25;
+    private static final int MAX_HUMAN_HP = 30;
     private static final int MIN_HUMAN_HP = 5;
-    private static final int MAX_HUMAN_STR = 20;
-    private static final int MIN_HUMAN_STR = 5;
+    private static final int MAX_HUMAN_STR = 18;
+    private static final int MIN_HUMAN_STR = 10;
 
     /**
      * Constructor for objects of class Human -
