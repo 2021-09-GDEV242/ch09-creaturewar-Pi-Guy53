@@ -1,9 +1,7 @@
-
-
 /**
  * The Human class implements a wrapper for the base Creature class with the following additions
- * Implements a maximum/minimum strength for the creature type [20/5]
- * Implements a maximum/minimum hitpoint total for the creature type [25/5]
+ * Implements a maximum/minimum strength for the creature type [18/5]
+ * Implements a maximum/minimum hitpoint total for the creature type [30/10]
  * 
  * @author Mihail Vaporakis
  * @version 2021-11-4
