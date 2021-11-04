@@ -18,9 +18,9 @@ public class Demon extends Creature
     /**
      * Generates a Demon with stats passed to it from its subtypes
      */
-    public Demon(int str, int hp)
+    public Demon(int hp, int str)
     {
-        super(str, hp);
+        super(hp, str);
     }
     
     /**
