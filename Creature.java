@@ -7,8 +7,8 @@
  * the creature is alive or knocked out. The creature is also responsible for calculating
  * damage delivered based on the creature's strength (1 to str) 
  * 
- * @author Crosbie
- * @version 2020-10 v1.0
+ * @author Mihail Vaporakis
+ * @version 2021-11-4
  */
 // we will learn what the abstract keyword does in a later chapter
 public abstract class Creature
@@ -36,8 +36,11 @@ public abstract class Creature
      * @param str the strength of the creature, used to calculate damage
      * @param hp the health of the creature at the start of the simulation, and the current health levels during battle
      */
-    public Creature (int str, int hp) {
-       //implement this
+    public Creature (int str, int hp) 
+    {
+        this.str = str;
+        this.hp = hp;
+        this.max_hp = hp;
     }
     
     
@@ -46,8 +49,11 @@ public abstract class Creature
      * @return a value between 1 and str to be used to cause damage to another creature
      */
     public int attack(){
-        // TODO: implement a damage method
-        return 0;
+        int dmg = 0;
+        
+        dmg = Randomizer.nextInt(str);
+        
+        return dmg;
     }
     
     
