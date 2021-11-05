@@ -33,20 +33,20 @@ public class BattleSimulation
     {
         armyOne = new ArrayList<Creature>();
         armyTwo = new ArrayList<Creature>();
-        
+
         armyOneSize = Randomizer.nextInt((armyOneMaxSize - armyOneMinSize) + armyOneMinSize);
         armyTwoSize = Randomizer.nextInt((armyTwoMaxSize - armyTwoMinSize) + armyTwoMinSize);
-        
+
         for(int i = 0; i < armyOneSize; i++)
         {
             armyOne.add(addToArmyOne());
         }
-        
+
         for(int i = 0; i < armyTwoSize; i++)
         {
             armyTwo.add(addToArmyTwo());
         }
-        
+
         Fight();
     }
 
@@ -55,9 +55,19 @@ public class BattleSimulation
      */
     public void Fight()
     {
-        
+        //main army fighting loop
+        while(armyOneIndex <= armyOneSize || armyTwoIndex <= armyTwoSize)
+        {
+            while(armyOne.get(armyOneIndex).isAlive() && armyTwo.get(armyTwoIndex).isAlive())
+            {
+                armyOne.get(armyOneIndex).takeDamage(armyTwo.get(armyTwoIndex).attack());
+                armyTwo.get(armyTwoIndex).takeDamage(armyOne.get(armyOneIndex).attack());
+                
+                
+            }
+        }
     }
-    
+
     /**
      * Generates a random Creature to add to armyOne
      * @return the creature to be added
