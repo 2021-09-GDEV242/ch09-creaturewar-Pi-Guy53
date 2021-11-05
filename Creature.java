@@ -8,7 +8,7 @@
  * damage delivered based on the creature's strength (1 to str) 
  * 
  * @author Mihail Vaporakis
- * @version 2021-11-4
+ * @version 2021-11-5
  */
 // we will learn what the abstract keyword does in a later chapter
 public abstract class Creature
@@ -104,4 +104,10 @@ public abstract class Creature
     {
         return hp;
     }
+    
+    public int getStrength()
+    {
+        return str;
+    }
+
 }

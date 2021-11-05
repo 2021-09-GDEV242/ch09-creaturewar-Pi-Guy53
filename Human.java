@@ -4,7 +4,7 @@
  * Implements a maximum/minimum hitpoint total for the creature type [30/10]
  * 
  * @author Mihail Vaporakis
- * @version 2021-11-4
+ * @version 2021-11-5
  */
 public class Human extends Creature
 {
@@ -41,5 +41,18 @@ public class Human extends Creature
     // attack() - not overridden because Humans generate basic damage
     // takeDamage(int) - not overridden, because Humans take all damage assigned to them
 
-    
+    /**
+     * @return if the HP are within the valid range
+     */
+    public boolean checkHealthRange()
+    {
+        return (getHealth() > MIN_HUMAN_HP && getHealth() <= MAX_HUMAN_HP);
+    }
+    /**
+     * @return if the Str is within the valid range
+     */
+    public boolean checkStrengthRange()
+    {
+        return (getStrength() > MIN_HUMAN_STR && getStrength() <= MAX_HUMAN_STR);
+    }
 }
