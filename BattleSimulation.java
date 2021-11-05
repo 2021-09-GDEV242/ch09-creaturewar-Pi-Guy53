@@ -31,6 +31,9 @@ public class BattleSimulation
      */
     public BattleSimulation()
     {
+        armyOne = new ArrayList<Creature>();
+        armyTwo = new ArrayList<Creature>();
+        
         armyOneSize = Randomizer.nextInt((armyOneMaxSize - armyOneMinSize) + armyOneMinSize);
         armyTwoSize = Randomizer.nextInt((armyTwoMaxSize - armyTwoMinSize) + armyTwoMinSize);
         
