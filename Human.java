@@ -2,6 +2,9 @@
  * The Human class implements a wrapper for the base Creature class with the following additions
  * Implements a maximum/minimum strength for the creature type [18/5]
  * Implements a maximum/minimum hitpoint total for the creature type [30/10]
+ * HP: 23.55 
+ * STR: 13.47
+ * Ratio: 4.25, 7.42
  * 
  * @author Mihail Vaporakis
  * @version 2021-11-5
@@ -34,9 +37,9 @@ public class Human extends Creature
             Randomizer.nextInt(MAX_HUMAN_HP-MIN_HUMAN_HP)+MIN_HUMAN_HP,    
             Randomizer.nextInt(MAX_HUMAN_STR-MIN_HUMAN_STR)+MIN_HUMAN_STR
         );
-          
+
     }
-    
+
     // attack() - not overridden because Humans generate basic damage
     // takeDamage(int) - not overridden, because Humans take all damage assigned to them
 
@@ -47,7 +50,7 @@ public class Human extends Creature
     {
         return (getHealth() > MIN_HUMAN_HP && getHealth() <= MAX_HUMAN_HP);
     }
-    
+
     /**
      * @return if the Str is within the valid range
      */

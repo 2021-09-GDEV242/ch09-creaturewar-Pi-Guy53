@@ -2,6 +2,9 @@
  * The CyberDemon is a basic type of demon.
  * Min/Max Strength 20/40
  * Min/Max Hit Points 25/100
+ * HP: 72.03
+ * STR: 35.37
+ * Ratio: 1.39, 2.83
  *
  * @author Mihail Vaporakis
  * @version 2021-11-4

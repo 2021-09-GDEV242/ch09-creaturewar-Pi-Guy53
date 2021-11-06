@@ -3,6 +3,9 @@
  * The Balrog is a massive fire Demon
  * Min/Max Strength 50/100
  * Min/Max Hit Points 80/200
+ * HP: 164.28
+ * STR: 87.87 * 2
+ * Ratio: 0.61, 1.14
  *
  * @author Mihail Vaporakis
  * @version 2021-11-4

@@ -3,6 +3,9 @@
  * Min/Max Strength 5/18
  * Min/Max Hit Points 8/25
  * Chance to deal x2 damage 10%
+ * HP: 19.42
+ * STR: 13.47
+ * Ratio: 5.15, 7.42
  *
  * @author Mihail Vaporakis
  * @version 2021-11-4
