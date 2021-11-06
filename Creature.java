@@ -1,4 +1,3 @@
-
 /**
  * Abstract class Creature - 
  * The creature is the main class from which all other battling creatures derive.

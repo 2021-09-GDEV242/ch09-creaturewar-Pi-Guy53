@@ -1,4 +1,3 @@
-
 /**
  * The Elf is an a magical creature.
  * Min/Max Strength 5/18

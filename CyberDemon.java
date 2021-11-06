@@ -1,4 +1,3 @@
-
 /**
  * The CyberDemon is a basic type of demon.
  * Min/Max Strength 20/40

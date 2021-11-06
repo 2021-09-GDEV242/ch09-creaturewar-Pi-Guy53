@@ -25,6 +25,8 @@ public class BattleSimulation
     private int armyOneMinSize = 90;
     private int armyTwoMaxSize = 50;
     private int armyTwoMinSize = 30;
+    
+    private boolean fight;
     /**
      * Constructor method for BattleSimulation, inisilizes two armies of
      * random composition
@@ -46,7 +48,8 @@ public class BattleSimulation
         {
             armyTwo.add(addToArmyTwo());
         }
-
+        
+        fight = true;
         Fight();
     }
 
@@ -56,16 +59,37 @@ public class BattleSimulation
     public void Fight()
     {
         //main army fighting loop
-        while(armyOneIndex <= armyOneSize || armyTwoIndex <= armyTwoSize)
-        {
-            while(armyOne.get(armyOneIndex).isAlive() && armyTwo.get(armyTwoIndex).isAlive())
+        //while(armyOneIndex < armyOneSize || armyTwoIndex < armyTwoSize)
+        //{
+            //individual combat loop
+            while(fight && armyOne.get(0).isAlive() && armyTwo.get(0).isAlive())
             {
-                armyOne.get(armyOneIndex).takeDamage(armyTwo.get(armyTwoIndex).attack());
-                armyTwo.get(armyTwoIndex).takeDamage(armyOne.get(armyOneIndex).attack());
+                armyOne.get(0).takeDamage(armyTwo.get(0).attack());
+                armyTwo.get(0).takeDamage(armyOne.get(0).attack());
                 
+                if(armyOne.get(0).isKnockedOut())
+                {
+                    armyOne.remove(0);
+                    armyOneIndex++;
+                }
                 
+                if(armyTwo.get(0).isKnockedOut())
+                {
+                    armyTwo.remove(0);
+                    armyTwoIndex++;
+                }
+                
+                if(armyOne.size() <= 0)
+                {
+                    fight = false;
+                }
+                
+                if(armyTwo.size() <= 0)
+                {
+                    fight = false;
+                }
             }
-        }
+        //}
     }
 
     /**
