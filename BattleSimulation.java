@@ -12,10 +12,6 @@ public class BattleSimulation
     private ArrayList<Creature> armyOne;
     private ArrayList<Creature> armyTwo;
 
-    //Index counter for the armies
-    private int armyOneIndex = 0;
-    private int armyTwoIndex = 0;
-
     //The size of the individual armies
     private int armyOneSize;
     private int armyTwoSize;
@@ -25,7 +21,7 @@ public class BattleSimulation
     private int armyOneMinSize = 90;
     private int armyTwoMaxSize = 50;
     private int armyTwoMinSize = 30;
-    
+
     private boolean fight;
     /**
      * Constructor method for BattleSimulation, inisilizes two armies of
@@ -48,7 +44,7 @@ public class BattleSimulation
         {
             armyTwo.add(addToArmyTwo());
         }
-        
+
         fight = true;
         Fight();
     }
@@ -59,37 +55,36 @@ public class BattleSimulation
     public void Fight()
     {
         //main army fighting loop
-        //while(armyOneIndex < armyOneSize || armyTwoIndex < armyTwoSize)
-        //{
-            //individual combat loop
-            while(fight && armyOne.get(0).isAlive() && armyTwo.get(0).isAlive())
+        //individual combat loop
+        while(fight && armyOne.get(0).isAlive() && armyTwo.get(0).isAlive())
+        {
+            armyOne.get(0).takeDamage(armyTwo.get(0).attack());
+            armyTwo.get(0).takeDamage(armyOne.get(0).attack());
+
+            if(armyOne.get(0).isKnockedOut())
             {
-                armyOne.get(0).takeDamage(armyTwo.get(0).attack());
-                armyTwo.get(0).takeDamage(armyOne.get(0).attack());
-                
-                if(armyOne.get(0).isKnockedOut())
-                {
-                    armyOne.remove(0);
-                    armyOneIndex++;
-                }
-                
-                if(armyTwo.get(0).isKnockedOut())
-                {
-                    armyTwo.remove(0);
-                    armyTwoIndex++;
-                }
-                
-                if(armyOne.size() <= 0)
-                {
-                    fight = false;
-                }
-                
-                if(armyTwo.size() <= 0)
-                {
-                    fight = false;
-                }
+                armyOne.remove(0);
             }
-        //}
+
+            if(armyTwo.get(0).isKnockedOut())
+            {
+                armyTwo.remove(0);
+            }
+
+            if(armyOne.size() <= 0)
+            {
+                fight = false;
+                System.out.println("The Armies of good(or maybe evil) prevailed and vanquished the foul demons.");
+            }
+
+            if(armyTwo.size() <= 0)
+            {
+                fight = false;
+                System.out.println("The Armies of evil(or maybe good) won, and crushed the foul Elves and their allies.");
+            }
+        }
+
+        System.out.println("No heros were harmed in the making of this battle, or maybe some were, we haven't \ncounted everyone yet.");
     }
 
     /**
