@@ -52,7 +52,7 @@ public class BattleSimulation
     /**
      * Fighting method, loops until one army is defeated
      */
-    public void Fight()
+    private void Fight()
     {
         //main army fighting loop
         //individual combat loop
