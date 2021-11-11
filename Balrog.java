@@ -37,4 +37,23 @@ public class Balrog extends Demon
         
         return dmg;
     }
+    
+    /**
+     * Test methods
+     */
+    /**
+     * @return if HP is within the valid range
+     */
+    public boolean checkHealthRange()
+    {
+        return (getHealth() > MIN_BALROG_HP && getHealth() <= MAX_BALROG_HP);
+    }
+
+    /**
+     * @return if the Str is within the valid range
+     */
+    public boolean checkStrengthRange()
+    {
+        return (getStrength() > MIN_BALROG_STR && getStrength() <= MAX_BALROG_STR);
+    }
 }

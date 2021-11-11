@@ -41,4 +41,23 @@ public class Elf extends Creature
         
         return dmg;
     }
+    
+    /**
+     * Test methods
+     */
+    /**
+     * @return if HP is within the valid range
+     */
+    public boolean checkHealthRange()
+    {
+        return (getHealth() > MIN_ELF_HP && getHealth() <= MAX_ELF_HP);
+    }
+
+    /**
+     * @return if the Str is within the valid range
+     */
+    public boolean checkStrengthRange()
+    {
+        return (getStrength() > MIN_ELF_STR && getStrength() <= MAX_ELF_STR);
+    }
 }

@@ -44,6 +44,9 @@ public class Human extends Creature
     // takeDamage(int) - not overridden, because Humans take all damage assigned to them
 
     /**
+     * Test methods
+     */
+    /**
      * @return if HP is within the valid range
      */
     public boolean checkHealthRange()

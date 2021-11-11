@@ -25,4 +25,23 @@ public class CyberDemon extends Demon
             Randomizer.nextInt(MAX_CYBERDEMON_STR-MIN_CYBERDEMON_STR)+MIN_CYBERDEMON_STR);
     }
 
+    /**
+     * Test methods
+     */
+    /**
+     * @return if HP is within the valid range
+     */
+    public boolean checkHealthRange()
+    {
+        return (getHealth() > MIN_CYBERDEMON_HP && getHealth() <= MAX_CYBERDEMON_HP);
+    }
+
+    /**
+     * @return if the Str is within the valid range
+     */
+    public boolean checkStrengthRange()
+    {
+        return (getStrength() > MIN_CYBERDEMON_STR && getStrength() <= MAX_CYBERDEMON_STR);
+    }
+    
 }
