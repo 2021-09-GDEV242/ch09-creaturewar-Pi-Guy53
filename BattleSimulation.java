@@ -17,10 +17,10 @@ public class BattleSimulation
     private int armyTwoSize;
 
     //Max and min army sizes
-    private int armyOneMaxSize = 110;
+    private int armyOneMaxSize = 120;
     private int armyOneMinSize = 90;
-    private int armyTwoMaxSize = 50;
-    private int armyTwoMinSize = 30;
+    private int armyTwoMaxSize = 60;
+    private int armyTwoMinSize = 45;
 
     private boolean fight;
     /**
@@ -74,17 +74,20 @@ public class BattleSimulation
             if(armyOne.size() <= 0)
             {
                 fight = false;
-                System.out.println("The Armies of good(or maybe evil) prevailed and vanquished the foul demons.");
+                System.out.println("The Armies of evil(or maybe good) won, and crushed the foul Elves and their allies.");
             }
 
             if(armyTwo.size() <= 0)
             {
                 fight = false;
-                System.out.println("The Armies of evil(or maybe good) won, and crushed the foul Elves and their allies.");
+                System.out.println("The Armies of good(or they could be evil) prevailed and vanquished the foul demons.");
             }
         }
 
-        System.out.println("No heros were harmed in the making of this battle, or maybe some were, we haven't \ncounted everyone yet.");
+        if(Randomizer.nextInt(10) == 10)
+        {
+            System.out.println("No heros were harmed in the making of this battle, or maybe some were, we haven't \ncounted everyone yet.");
+        }
     }
 
     /**
