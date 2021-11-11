@@ -97,14 +97,19 @@ public class BattleSimulation
     private Creature addToArmyOne()
     {
         Creature warrior;
+        int r = Randomizer.nextInt(12);
 
-        if(Randomizer.nextInt(10) <= 6)
+        if(r <= 6)
         {
             warrior = new Human();
         }
-        else 
+        else if(r <=10)
         {
             warrior = new Elf();
+        }
+        else
+        {
+            warrior = new Wizard();
         }
 
         return warrior;
@@ -134,5 +139,4 @@ public class BattleSimulation
 
         return warrior;
     }
-
 }
